@@ -1,8 +1,26 @@
 package Questions_basics;
 
 public class A_rotatedArray {
+    public static int findpivot(int[] arr){
+        int low=0, high= arr.length-1;
+        while(high > low){
+            int mid = low + (high - low)/2;
 
+            if(arr[mid] > arr[high]){
+                low = mid + 1;
+            } else{
+                high = mid;
+            }
+        }
+        return low;
+    }
 
+    public static void main(String[] args) {
+        int[] arr = {4, 5, 6, 7, 0, 1, 2};
+        int pivotindex = findpivot(arr);
+        System.out.println(pivotindex);
+        System.out.println(arr[pivotindex]);
+    }
 }
 
 
