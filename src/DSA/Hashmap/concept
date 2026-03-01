@@ -1,0 +1,65 @@
+🔑 Why HashMap is Used?
+
+Without HashMap:
+Searching in array → O(n)
+
+With HashMap:
+Searching by key → O(1)
+
+That’s why HashMap is heavily used in DSA + interviews.
+
+Roll Number → Student Name
+101 → Rahul
+102 → Aman
+103 → Neha
+
+Here:
+Key = Roll Number
+Value = Student Name
+
+
+HashMap Syntax:  HashMap<KeyType, ValueType> map = new HashMap<>();
+Example:         HashMap<Integer, Integer> map = new HashMap<>();
+
+
+🧑‍💻 Basic HashMap Operations
+1️⃣ Put (Insert)
+        map.put(1, 10);
+        map.put(2, 20);
+2️⃣ Get (Retrieve)
+        int val = map.get(1);   // 10
+3️⃣ Contains Key
+        map.containsKey(2);  // true
+4️⃣ Remove
+        map.remove(1);
+
+🔹 getOrDefault() (VERY IMPORTANT)
+map.getOrDefault(key, defaultValue);
+
+🔹 Iterating a HashMap
+1️⃣ Using Entry Set (BEST)
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " -> " + entry.getValue());
+}
+
+2️⃣ Using Key Set
+for (int key : map.keySet()) {
+    System.out.println(key + " -> " + map.get(key));
+}
+
+🔹 HashMap with Characters (String Problems)
+String s = "aabbcc";
+HashMap<Character, Integer> map = new HashMap<>();
+
+for (char c : s.toCharArray()) {
+    map.put(c, map.getOrDefault(c, 0) + 1);
+}
+
+### methods
+
+put()           → insert / update
+get()           → fetch value
+getOrDefault()  → safe get ⭐
+containsKey()   → key exists?
+entrySet()      → best iteration ⭐
+remove()        → delete

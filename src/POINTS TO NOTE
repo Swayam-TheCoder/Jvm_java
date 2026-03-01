@@ -1,0 +1,205 @@
+Math Class methods
+Math.  -->  abs(): return absolute(positive) value
+            max(): maximum of two numbers
+            min(): minimum of two numbers
+            sqrt(): square root
+            pow(): power
+            random(): random value from 0.0 to 1.0
+            round(): nearest integer
+            floor(): largest integer value
+            ceil(): smallest integer value
+            log(): natural log and log10(): base 10
+            sin(), cos(), tan(): trigonometric values
+            PI: 3.14159
+            E: 2.718
+
+toString
+-- if we are not using toString method then the default output is written as class_name@hashcode
+-- toString() provides a string representation of an object
+-- default format: class_name@hashcode
+-- automatically called in string concatenation
+
+String methods:
+length() : Returns the number of characters.
+charAt(index) : Returns character at given index (0-based).
+toUpperCase() : Converts string to uppercase.
+toLowerCase() : Converts string to lowercase.
+equals() : Compares content of strings.
+equalsIgnoreCase() : Ignores case while comparing.
+compareTo() : Lexicographically compares strings (dictionary order).
+compareToIgnoreCase() : CompareTo() ignore case version..
+contains() : Checks if string contains given sequence.
+startsWith() : Checks whether a string starts with a given prefix.
+endsWith() : Checks whether a string ends with a given suffix.
+indexOf() : Returns index of first occurrence.
+lastIndexOf() : Returns last occurrence index.
+substring() : Extracts part of string.
+replace() : Replaces characters or strings.
+trim() : Removes leading & trailing spaces.
+split() : Splits string into array.
+valueOf() : Converts other data types to String.
+
+
+String class (Format specifier)
+//pending
+
+
+
+StringBuilder and stringBuffer
+// 1) Mutability:  String is immutable but str builder/buffer is mutable
+
+// 2) string stores in String constant pool and Str bui/buff stores in heap memory
+
+// 3) IMP : Thread Safety
+/* String: Not used in threaded environment as it is immutable
+    StringBuilder: Not thread safe so it is used in a single-threaded environment.
+    StringBuffer: Thread safe so it is used in a multi-threaded environment.
+ */
+
+// 4) IMP : Speed
+/* String: Comparatively slowest
+    stringBuffer: faster than string but slower than stringBuilder
+    stringBuilder: Comparatively faster
+*/
+
+
+4 pillars
+1. Encapsulation:
+            1. data hiding: hiding internal data, allowing access only through methods.
+            2. Access Modifiers: Use public, private, protected to control access to class members
+            3. Getter/setter
+            4. Maintains Integrity: Protects object state from external interference
+            5. Enhanced Modularity: Keeps classes separate
+
+
+            Imports and packages:
+            A package in Java is a namespace that groups related classes, interfaces, enums, and sub-packages together.
+            Types of Packages -->
+            - Built-in Packages: java. lang,util,io,sql,net
+            - User-Defined Packages:  package com.college.exam;
+            An import statement allows a Java program to access classes defined in other packages without using their full package name.
+            Eg. import java.util.Scanner;       Scanner sc = new Scanner(System.in);
+            Types of Import Statements
+            - Single-Class Import
+                import java.util.Scanner;
+            - Wildcard Import
+                import java.util.*;
+            Note: java.lang (automatically imported)
+
+            Access Modifiers:
+            Types: public, protected, default (no modifier), private
+            public: Everywhere
+            protected: Same package + subclasses
+            default: Same package
+            private: Within the same class only
+
+            Getter and Setter
+            LEARN AGAIN!!
+
+
+
+
+
+
+Exception handling
+What is an Exception: An exception is an unexpected event that occurs during program execution and disrupts the normal flow of the program.
+Types of Exceptions
+1. Checked Exceptions
+
+2. Unchecked Exceptions
+
+
+try catch
+
+
+throw/throws
+
+
+FileWriter
+It is a Java class used to write character data (text) into a file.
+Common methods:
+write(int c) --> Writes Single character
+write(String s) --> Writes String
+write(char[] c) --> Writes char array
+flush() --> forces writing
+close() --> closes stream
+
+
+FileReader
+FileReader class is used for reading streams of characters from files.
+It is a character based stream meaning it reads character.
+Common Methods:
+read(): reads a single character and return it as integer. return -1 if the end of the stream (flow) is reached
+read(char[] buf): reads characters into an array and returns a number of characters read.
+
+#Collections
+
+List Interface methods:
+add(E e):Appends the specified element
+add(int index, E element): Insert at specified position
+remove(Object o): Removes the first occurrence of the specified element
+remove(int index): removes the first occurrence of the specified element
+get(int index): return the element at the specified position
+set(int index, E element): replaces the element at the specified position
+size(): return the number of elements
+clear(): removes all of the elements
+contains(Object o): returns 'true' if the list contains the specified element
+indexOf(Object o): returns the index of the first occurrence, or -1 if the list does not contain the element.
+
+Queue Interface:
+add(E e): Inserts the specified element into the queue. Throws an exception if the element cannot be added
+offer(E e): Inserts the specified element into the queue. returns false if the element cannot be added
+remove(): retrives and removes the head of the queue. throws an exception if the queue is empty
+poll(): retrives and removes the head of the queue, or returns null if the queue is empty
+element(): retrieves, but does not remove, the head of the queue. Throws an exception if the queue is empty.
+peek(): retrieves, but does not remove, the head of the queue, or return null if the queue is empty.
+
+Set Interface:
+add(E e): Adds the specified element from the set
+remove(Object o): Removes the specified element from the set
+contains(Object o): checks if the set contains the specified element
+size(): return the number of element in the set
+isEmpty(): checks if thw set is empty
+
+Collections class
+creating a list
+sorting the list
+find max and min in the list
+reversing the list
+searching in the list (list must be sorted)
+creating an immutable list
+
+# Map Interface
+(Stores data in key-value pair)
+
+put(K key, V Value): Associate specific value with the specific value in the map
+get(Object key): Returns the value to which the specified key is mapped, or null if map contains no mapping
+remove(Object key): Remove the mapping for the key
+containsKey(Object key): checks if the map contains a mapping for specifed key
+keySet(): returns a set view of the key
+values(): returns a collection view
+
+# Enums
+An enum (enumeration) is a special data type used to define a fixed set of named constants.
+Why Use Enum?
+- Improves readability
+- Prevents invalid values
+- Makes code type-safe
+- Better than using constants (public static final)
+
+Important methods:
+values()	Returns all enum constants
+valueOf()	Converts string to enum
+ordinal()	Position (index)
+name()	    Name of constant
+
+
+# Generics and Diamond Operators
+Generics: Generics allow you to write type-safe, reusable code by specifying the type of data a class, method, or interface can work with.
+
+Why Use Generics?
+- Avoid ClassCastException
+- Improve type safety
+- Eliminate explicit type casting
+- Enable code reusability
+
