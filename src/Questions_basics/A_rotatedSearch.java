@@ -19,7 +19,7 @@ public class A_rotatedSearch {
                     low = mid + 1;
                 }
             }
-            // right half sorted
+//             right half sorted
             else{
                 if(target > arr[mid] && target <= arr[high]){
                     low = mid + 1;
