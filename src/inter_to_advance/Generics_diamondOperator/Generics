@@ -1,0 +1,27 @@
+1️⃣ What are Generics? 🧠
+
+Generics allow you to write type-safe, reusable code by specifying the data type at compile time.
+
+Without Generics ❌
+ArrayList list = new ArrayList();
+list.add(10);
+list.add("Hello"); // allowed
+
+int x = (int) list.get(0); // casting needed
+
+Problems:
+❌ No type safety
+❌ Runtime ClassCastException
+❌ Manual casting
+
+With Generics ✅
+ArrayList<Integer> list = new ArrayList<Integer>();
+list.add(10);
+// list.add("Hello"); ❌ compile-time error
+
+int x = list.get(0); // no casting
+
+✔ Type safe
+✔ Errors caught at compile time
+✔ Cleaner code
+
