@@ -2,7 +2,7 @@ package Questions_in_to_advance.String_questions;
 
 public class SubstringOfStr {
     public static void main(String[] args) {
-        String s = "swayam";
+        String s = "123";
 //        System.out.println(s.substring(2));
 //        System.out.println(s.substring(1,3));
 //        System.out.println(s.substring(1,s.length() - 1));
@@ -15,5 +15,9 @@ public class SubstringOfStr {
             }
             System.out.println();
         }
+
     }
 }
+
+
+//continue from 2:09:00

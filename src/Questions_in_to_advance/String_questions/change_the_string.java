@@ -5,11 +5,7 @@ package Questions_in_to_advance.String_questions;
 
 public class change_the_string {
     static void modify(String s){
-        s = "hello";
-        s += "world";
-        s += "\n";
-        s += "10";
-        System.out.println(s);
+
     }
 
     public static void main(String[] args) {
