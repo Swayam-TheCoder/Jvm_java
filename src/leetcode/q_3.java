@@ -1,23 +1,27 @@
 package leetcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class q_3 {
     public static int lengthOfLongestSubstring(String s) {
-        int st = 0;
-        return st;
+        Set <Character> chset = new HashSet<>();
+        int left = 0;
+        int max = 0;
+        for(int right=0; right<s.length(); right++){
+            while(chset.contains(s.charAt(right))){
+                chset.remove(s.charAt(left));
+                left++;
+            }
+            chset.add(s.charAt(right));
+            max = Math.max(max, right-left+1);
+        }
+        return max;
     }
 
     public static void main(String[] args) {
         String s = "swayam";
-//        int len = lengthOfLongestSubstring(s);
-//        System.out.println(len);
-
-        for(int i=0; i<s.length(); i++) {
-            for (int j = i+1; j <= s.length(); j++) {
-                String str = s.substring(i, j);
-                System.out.print(str.length()+ " " + str+ " ");
-            }
-            System.out.println();
-        }
-
+        System.out.println(lengthOfLongestSubstring(s));
+// try again
     }
 }

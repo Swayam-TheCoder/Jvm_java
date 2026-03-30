@@ -1,4 +1,4 @@
-package Questions_in_to_advance.String_questions;
+package DSA.String_questions;
 
 // lowercase to upper and upper to lower
 // a - 97

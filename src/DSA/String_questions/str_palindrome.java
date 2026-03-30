@@ -1,6 +1,4 @@
-package Questions_in_to_advance.String_questions;
-
-import OOPS.pillars.encapsulations.world.Packages;
+package DSA.String_questions;
 
 public class str_palindrome {
     public static void main(String[] args) {

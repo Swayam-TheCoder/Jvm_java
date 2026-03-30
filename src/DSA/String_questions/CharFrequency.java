@@ -1,4 +1,4 @@
-package Questions_in_to_advance.String_questions;
+package DSA.String_questions;
 
 public class CharFrequency {
     public static void main(String[] args) {

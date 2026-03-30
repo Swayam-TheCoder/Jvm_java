@@ -1,4 +1,4 @@
-package Questions_in_to_advance.String_questions;
+package DSA.String_questions;
 
 // input: Abcd    output: ABCD    because in input, first letter is capital
 // input: abCD    output: abcd    because in input, first letter is small

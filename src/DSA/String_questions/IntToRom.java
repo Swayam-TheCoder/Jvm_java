@@ -1,4 +1,4 @@
-package DSA.Strings;
+package DSA.String_questions;
 
 public class IntToRom {
     public static String intToRoman(int num) {

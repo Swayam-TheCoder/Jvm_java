@@ -1,6 +1,4 @@
-package Questions_in_to_advance.String_questions;
-
-import basics_to_Intermediate.Stringbuilder;
+package DSA.String_questions;
 
 import java.util.HashSet;
 
